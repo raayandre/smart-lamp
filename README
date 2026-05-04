@@ -1,1 +1,92 @@
+## Tutorial Básico de Git
 
+### 1. Inicializar um repositório
+- `git init`
+  - Cria um repositório Git dentro da pasta atual.
+  - Use quando quiser começar a controlar versões de um projeto novo localmente.
+
+### 2. Verificar o status
+- `git status`
+  - Mostra quais arquivos foram modificados, adicionados ou ainda não estão sendo rastreados.
+  - Útil para ver o que está pronto para ser enviado.
+
+### 3. Adicionar arquivos ao stage
+- `git add nome-do-arquivo`
+  - Prepara um arquivo específico para o próximo commit.
+- `git add .`
+  - Adiciona todas as alterações na pasta atual.
+- `git add -A`
+  - Adiciona todos os arquivos modificados, novos e removidos.
+
+### 4. Criar um commit
+- `git commit -m "Mensagem do commit"`
+  - Salva as alterações no histórico com uma mensagem explicando o que foi feito.
+
+### 5. Ver histórico
+- `git log`
+  - Lista os commits recentes.
+- `git log --oneline`
+  - Mostra o histórico de forma curta, uma linha por commit.
+
+### 6. Ver diferenças
+- `git diff`
+  - Mostra alterações não adicionadas ao stage.
+- `git diff --staged`
+  - Mostra alterações que já foram adicionadas e esperam pelo commit.
+
+### 7. Trabalhar com branches (ramificações)
+- `git branch`
+  - Lista branches locais.
+- `git branch nome-da-branch`
+  - Cria uma nova branch.
+- `git checkout nome-da-branch`
+  - Muda para outra branch.
+- `git checkout -b nome-da-branch`
+  - Cria e muda para a nova branch em um só comando.
+
+### 8. Mesclar branches
+- `git merge nome-da-branch`
+  - Une a branch especificada na branch atual.
+
+### 9. Clonar um repositório remoto
+- `git clone https://github.com/usuario/repositorio.git`
+  - Copia o repositório remoto para sua máquina.
+
+### 10. Configurar informações do usuário
+- `git config --global user.name "Seu Nome"`
+- `git config --global user.email "seu@email.com"`
+  - Define identidade para os commits.
+
+### 11. Ver branches remotas e locais
+- `git branch -a`
+  - Mostra branches locais e remotas.
+- `git branch -r`
+  - Mostra apenas as branches remotas.
+
+### 12. Puxar e enviar alterações
+- `git pull`
+  - Baixa e integra mudanças do repositório remoto para sua branch atual.
+- `git push origin nome-da-branch`
+  - Envia seus commits locais para o repositório remoto.
+
+### 13. Criar e usar tags
+- `git tag v1.0`
+  - Cria uma tag leve para marcar uma versão.
+- `git tag -a v1.0 -m "Versão 1.0"`
+  - Cria uma tag anotada com mensagem.
+
+### 14. Reverter mudanças
+- `git checkout -- nome-do-arquivo`
+  - Desfaz alterações não comitadas em um arquivo.
+- `git reset HEAD nome-do-arquivo`
+  - Remove do stage, mas mantém a modificação no arquivo.
+- `git revert <hash-do-commit>`
+  - Cria um novo commit que desfaz um commit anterior.
+
+### 15. Boas práticas
+- Faça commits pequenos e claros.
+- Escreva mensagens de commit descritivas.
+- Use branches para trabalhar em recursos/ajustes sem afetar a branch principal.
+- Atualize o repositório remoto com `git pull` antes de começar a trabalhar.
+
+> Este é o conjunto básico para começar com Git. Conforme for usando, você pode aprender recursos mais avançados como `git rebase`, `git stash`, `git cherry-pick`, e resolução de conflitos.
